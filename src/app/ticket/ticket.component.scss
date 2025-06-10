@@ -1,0 +1,501 @@
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/bg-autocar.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.05;
+  }
+ion-header{
+    color: var(--text-color-light);
+}
+.destination-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-color-light);
+    justify-content: space-between;
+    }
+ion-icon{
+    width: 22.22px;
+    height: 22.22px;
+}
+
+#p1{
+  font-weight: 600;
+  margin-bottom: -15px;
+  text-align: center;
+}
+
+#p2{
+    font-weight: 200;
+    color: var(#2F2F2F);
+    text-align: center;
+}
+.filter-options{
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: var();
+}
+.filter-options div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+}
+#filter-modal-header{
+    margin: 0 auto;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Align items horizontally in the center */
+    border-bottom: 2px solid rgba(209, 209, 209, 0.78);
+   
+}
+#filter-modal-header p{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+//check box 
+ion-checkbox {
+    --size: 32px;
+    --checkbox-background-checked: #F29123;
+  }
+  
+ion-checkbox::part(container) {
+    border-radius: 0px;
+    border: 2px solid #918F8F;
+    margin-right: 10px;
+    width: 21px;
+    height:21px;
+  }
+#societe{
+    color: #F29123;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+ #filter-option-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 80%;
+    margin: 30px 30px;
+  }
+
+  #filter-option-div p{
+    color: #040404;
+    font-weight: 400;
+  }
+  #filter-modal-header ion-icon{
+    width: 18px;
+    height: 18px;
+  }
+  #checkbox-trie::part(container) {
+    border-radius: 20px;
+  }
+  // ticket styling
+.ticket-card{
+   border: 2px solid #F29123;
+   min-height: 173px;
+//    min-height: 200px;
+   width: 95%;
+   margin: 0 auto;
+   border-radius: 16px;
+   margin-top: 20px;
+   padding: 0 5px;
+   padding-top: 20px;
+   color: var(--ion-color-dark);
+}
+.ticket-header{
+    width: 99%;
+    height: 173px;
+    // border: 2px solid #F29123;
+    border-radius: 16px;
+    margin:10px auto;
+    display: flex;
+    padding: 2px;
+}
+.ticket-div1{
+    // border: 1px solid blue;
+    width: 100%;
+    min-height: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    color: var(--ion-color-dark);
+}
+.ticket-div2{
+    // border: 1px solid green;
+    min-height: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.ticket-div2-label1,.ticket-div2-label2,.ticket-div2-label3{
+    // border: 1px solid black;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    
+}
+.ticket-div2-label2{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+#fleche-icon {
+    width: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+.ticket-div2-label2 #time-travel{
+    background-color: #F29123;
+    border-radius: 6.5px;
+    width: 60px;
+    height: 13px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    font-size: x-small;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.ticket-div2-label1 #time-depart,#time-arrivee{
+    color: var(--ion-color-dark);
+    font-weight: 700;
+    font-size: medium;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.ticket-div2 ion-icon{
+    width: 13px;
+    height: 13px;
+}
+
+
+.ticket-div3{
+    // border: 1px solid green;
+    min-height: 33%!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#number1-ticket{
+    width: 41px;
+    height: 41px;
+}
+#company-icon{
+    border: 1px solid #F29123;
+    height: 36px;
+    width: 36px;
+    margin-right: 10px;
+    border-radius: 18px;
+}
+.xxx{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.confort-div{
+    text-align: center;
+    width: 48px;
+    height: 15px;
+    border-radius: 7px;
+    border: 1px solid #F29123;
+    color: #F29123;
+    background-color: #FFECD7;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-div3 div{
+    font-size: small;
+    width: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ticket-div3 div:nth-child(1){
+    width: auto;
+    padding: 2px;
+    border-radius: 8px;
+    border: 1px solid #B1B1B1;
+    margin-left: 4px;
+    font-weight: 300;
+}
+#p-price1{
+    text-align: center;
+}
+#p-price1 ion-icon{
+    position: absolute;
+    bottom:20px;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+}
+
+#p-price2{
+    text-align: center;
+    font-weight: 700;
+    color: #F29123;
+    font-size: 24px;
+}
+// seats css 
+
+.bus {
+    width: 235px;
+    height: auto;
+    border: 1px solid #D1D1D1;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    border-radius: 14px;
+    position: relative;
+}
+.seat {
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+    position: relative;
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.seat ion-icon{
+   width: 26px;
+   height: 26px;
+}
+.seat p{
+    position: absolute; /* Position relative to the parent (.seat) */
+    top: 50%; /* Position vertically in the middle */
+    left: 50%; /* Position horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the seat number */
+    margin: 0; /* Remove default margin */
+    color: --var(#000000);
+    font-size: x-small;
+}
+.left-side, .right-side {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0px;
+    margin-top: 50px;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Align items horizontally centered */
+}
+.bus-wheel{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 15px;   
+}
+.ticket-bus-header{
+    border: 1px solid #EBEBEB;
+    border-bottom: 2px solid #F29123;
+    font-weight: 600;
+    color: #F29123;
+    margin-bottom: 20px;
+}
+.ticket-bus-header p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ticket-bus-details{
+    width: 100%;
+    margin-top: 10px;
+}
+.ticket-bus-details div{
+    border: 1px solid black;
+    width: 100%;
+}
+.ticket-bus-details div:nth-child(1){
+    margin-left: 60%;
+    width: 40%;
+    text-wrap: nowrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #F3CA9A;
+    background-color: #FEF7EF;
+    color: #F29123;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: small;
+}
+.ticket-bus-details ion-icon{
+    width: 100%;
+}
+.info-icon{
+     height: 20px;
+     width: 20px;
+}
+
+.expand-icon{
+    height: 8px;
+    width: 6px;
+}
+
+.acheter-container-left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+    padding-left: 10px;
+}
+.acheter-container-left div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-wrap: nowrap;
+}
+.buy-div{
+    display: flex;
+    align-items: center;
+     justify-content:flex-end;
+    --width: 10%!important;
+}
+.buy-button{
+    // border: 1px solid red;
+    color: white;
+    --padding-right:20px!important;
+    --border-radius: 43px!important;
+    --height: 5px!important;
+
+    
+}
+
+
+.form-recherche-modal {
+    width: 90%; /* 90% of the viewport width */
+    height: auto; /* Automatically adjust height based on content */
+    max-height: 50vh; /* Maximum height of 80% of the viewport height */
+    margin: auto; /* Center horizontally */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 24px; /* Rounded corners */
+    border: 1px solid gray;
+}
+h1{
+    font-weight: 500;
+    font-size: 20px;
+    margin:20px auto;
+}
+.achat-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 700px) {
+   
+    .ticket-card{
+        width: 60%;
+    }
+    .achat-card{
+        position: fixed;
+        bottom: 0;
+        top: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        --width: 100%!important;
+        --padding:20px;
+        border-radius: 12px;
+        overflow:hidden;
+    }
+    
+    .achat-card .achat-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    #trie-card{
+         z-index: 100;
+        --width: 100%!important;
+        --height: 63vh!important;
+        --padding: 20px;
+        --border-radius: 23px !important;
+         padding-top: 100%;
+    }
+    .filter-card{
+        z-index: 100;
+        --width: 100%!important;
+        --height: 100vh!important;
+        --padding: 20px;
+        --border-radius: 23px !important;
+         padding-top: 100%;
+    }
+    .achat-card{
+        position: fixed;
+        bottom: 0;
+        top: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        --width: 100%!important;
+        --padding: 20px;
+        border-radius: 12px;
+        overflow:hidden;
+    }
+    
+    .achat-card div{
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    
+    }
+}

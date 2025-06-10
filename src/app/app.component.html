@@ -1,0 +1,68 @@
+<ion-split-pane contentId="main-content" [class.dark-theme]="darkModeService.darkModeEnabled" *ngIf="!isWelcomePage() && !isLoginPage() && !isRegisterPage()" >
+ 
+     
+  <ion-menu contentId="main-content"  [ngClass]="{'ion-menu-expanded': isSidebarExpanded, 'ion-menu-collapsed': !isSidebarExpanded}">
+    <ion-content>
+      <ion-icon *ngIf="isSidebarExpanded" id="collapse-icon" (click)="toggleSidebar()" src="../assets/icon/Group 367.svg"></ion-icon>
+      <ion-icon *ngIf="!isSidebarExpanded" id="collapse-icon" (click)="toggleSidebar()" src="../assets/icon/Group_367.svg"></ion-icon>
+      <ion-icon *ngIf="!isSidebarExpanded" class="side-bar-logo" src="../assets/icon/Untitled-5x 3.svg"> </ion-icon>
+      <ion-img  *ngIf="isSidebarExpanded" class="side-bar-logo-expanded" src="../assets/img/logos/egare-logo-color-512.png"> </ion-img>
+      <ion-icon (click)="navigateToRechercheTab()" *ngIf="!isSidebarExpanded" class="side-bar-options" aria-hidden="true" name="search-outline"></ion-icon>
+      <ion-icon (click)="navigateToTab2()" *ngIf="!isSidebarExpanded" class="side-bar-options" aria-hidden="true" name="ticket-outline"></ion-icon>
+      <ion-icon (click)="navigateToTab3()" *ngIf="!isSidebarExpanded" class="side-bar-options" aria-hidden="true" name="information-circle-outline"></ion-icon>
+      <ion-icon (click)="navigateToTab4()" *ngIf="!isSidebarExpanded" class="side-bar-options" aria-hidden="true" name="person-circle-outline"></ion-icon>
+      <!-- <ion-icon *ngIf="!isSidebarExpanded" class="side-bar-options" aria-hidden="true" name="language"></ion-icon> -->
+      <ion-icon (click)="logout()" *ngIf="!isSidebarExpanded && loggedIn" class="side-bar-options" aria-hidden="true" name="exit"></ion-icon>
+      <ion-icon (click)="navigateToLogin()" *ngIf="!isSidebarExpanded && !loggedIn" class="side-bar-options" aria-hidden="true" name="exit"></ion-icon>
+   
+
+      <ion-icon *ngIf="!isSidebarExpanded" (click)="setDarkMode()" class="side-bar-options dark_mode-ic" src="../assets/icon/nightlight.svg"></ion-icon>
+      <ion-avatar class="ion-avatar-collapsed" *ngIf="!isSidebarExpanded">
+      <ion-img *ngIf="loggedIn" src={{user?.img}}></ion-img>
+      </ion-avatar>
+
+
+      <div class="side-bar-container" *ngIf="isSidebarExpanded">
+        <div (click)="navigateToRechercheTab()"><ion-icon aria-hidden="true" name="search-outline"></ion-icon><div><p>RECHERCHER</p></div></div>
+        <div (click)="navigateToTab2()"><ion-icon aria-hidden="true" name="ticket-outline"></ion-icon><div><p>TICKETS</p></div></div>
+        <div (click)="navigateToTab3()"><ion-icon aria-hidden="true" name="information-circle-outline"></ion-icon><div><p>AIDE</p></div></div>
+        <div (click)="navigateToTab4()"><ion-icon aria-hidden="true" name="person-circle-outline"></ion-icon><div><p>PROFIL</p></div></div>
+        <div><ion-icon  aria-hidden="true" name="language"></ion-icon><div><ion-select placeholder="Langue" (ionChange)="languageChanged($event)">
+          <ion-select-option value="fr">
+          
+             {{ 'FRENCH' | translate }}
+           
+          
+          </ion-select-option>
+          <ion-select-option value="en">
+            
+              
+            
+            {{ 'ENGLISH' | translate }}
+          </ion-select-option>
+        </ion-select></div></div>
+        <div *ngIf="loggedIn" (click)="logout()"><ion-icon  aria-hidden="true" name="exit"></ion-icon><div><p>LOG OUT</p></div></div>
+        <div *ngIf="!loggedIn" (click)="navigateToLogin()"><ion-icon  aria-hidden="true" name="exit"></ion-icon><div><p>LOG IN</p></div></div>
+    </div>
+    
+     <div class="dark-mode-expanded" *ngIf="isSidebarExpanded" (click)="setDarkMode()" >
+      <ion-icon  src="../assets/icon/nightlight.svg"></ion-icon>
+      <p>Dark mode</p>
+    </div>
+
+    <div *ngIf="isSidebarExpanded &&  loggedIn" class="user-info-container">
+       <ion-avatar >
+        <ion-img src={{user?.img}}></ion-img>
+       </ion-avatar>
+       <p><strong>{{user?.name}}</strong> <br> {{user?.phone}}</p>
+    </div>
+    </ion-content>
+
+   
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>
+
+<ion-router-outlet id="main-content" *ngIf="isWelcomePage() || isLoginPage() || isRegisterPage()"></ion-router-outlet>
+

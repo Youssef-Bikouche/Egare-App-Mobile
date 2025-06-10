@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true" class="welcome-content" [class.dark-theme]="darkModeService.darkModeEnabled">
+  <div class="dark-mode-icon" (click)="toggleDarkMode()">
+    <ion-icon src="../../assets/icon/nightlight.svg" ></ion-icon>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" size-lg="4" offset-lg="4">
+        <ion-img class="logo-welcome" src="../../assets/img/logos/egare-logo-color-512.png"></ion-img>
+        <ion-img class="bg-welcome" src="../../assets/img/welcome-img.png"></ion-img>
+        <p id="p1">Bienvenue sur EGARE.MA</p>
+        <p id="p2">Voyagez en bus, partout au Maroc</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="buttons-container" >
+        <ion-button (click)="goToLogin()" class="welcome-page-button">S'identifier</ion-button>
+        <ion-button  (click)="goToRegister()" class="welcome-page-button">S'enregistrer</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col id="last-col" size-md="6" offset-md="3" size-lg="4" offset-lg="4">
+        <p id="p3" (click)="goToRecherche()"><a>passer cette étape <ion-icon id="arrow" name="arrow-forward-outline"></ion-icon></a> </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

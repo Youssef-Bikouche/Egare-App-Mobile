@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-title-header-text">{{ 'RECHERCHE_TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding"> 
+  <ion-icon *ngIf="!darkmodeservice.darkModeEnabled" class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-img class="logo" src="../../assets/img/logos/logo-egare-0.png"></ion-img>
+        </div>
+      </ion-col>  
+    </ion-row> 
+    <ion-row> 
+      <ion-col> 
+        <div class="ion-text-center">
+          <h1>{{ 'HELLO' | translate }} <strong *ngIf="loggedIn">{{user?.name}} !</strong></h1>
+          <h3>{{ 'WHERE_ARE_YOU_GOING' | translate }}</h3>
+          <p>{{ 'SEARCH_YOUR_NEXT_BUS' | translate }}</p> 
+        </div>
+       
+      </ion-col> 
+    </ion-row> 
+  </ion-grid>
+ 
+  <app-search-form></app-search-form>
+  <ion-toast id="errorMessage" color="danger" [isOpen]="isErrorMessage" message="{{errorMessage}}" [duration]="2000"></ion-toast>
+</ion-content>

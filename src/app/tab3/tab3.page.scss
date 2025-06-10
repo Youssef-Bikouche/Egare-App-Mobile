@@ -1,0 +1,63 @@
+.bg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/bg-autocar.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+p{
+  font-size: 24px;
+  font-weight: 700;
+  color: #F29123;
+  text-align: center;
+  margin-top: 50px;
+}
+.tab3-img {
+  width: 90% !important;
+  margin: 0 auto !important;
+  height: 127px !important;
+  // border: 4px solid red;
+ 
+}
+
+ion-accordion-group{
+  margin-top: 80px;
+}
+ion-accordion{
+  width: 90%;
+  border-radius: 13px;
+  margin: 20px auto;
+  
+}
+#aide-icons{
+  margin-right: 10px !important; /* Add some right margin for spacing */
+  height: 20px;
+  width: 19px;
+}
+
+#ion-accordion-header{
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(72, 72, 72, 1);
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+@media screen and (min-width: "760px") {
+  ion-header{
+    height: 0px;
+    width: 0px;
+  }
+  p{
+    margin-top: 100px;
+   }
+}
+
+

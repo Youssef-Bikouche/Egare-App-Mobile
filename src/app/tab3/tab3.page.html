@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-title-header-text">
+      {{ 'SEARCH_TITLE' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-icon class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+   <p><strong>{{ 'EGARE_SERVICE' | translate }}</strong></p>
+   <ion-img class="tab3-img"
+      src="../../assets/img/autocar_bg.png"
+      alt="autocar picture">
+    </ion-img>
+
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label id="ion-accordion-header"><ion-icon id="aide-icons" src="../../assets/icon/supervisor_account.svg"></ion-icon>{{ 'ABOUT_US' | translate }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">First Content</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label id="ion-accordion-header"><ion-icon  id="aide-icons" src="../../assets/icon/cognition.svg"></ion-icon>{{ 'HOW_IT_WORKS' | translate }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Second Content</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label id="ion-accordion-header"><ion-icon  id="aide-icons" src="../../assets/icon/book_online.svg"></ion-icon>{{ 'HOW_TO_BOOK' | translate }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Third Content</div>
+      </ion-accordion>
+      <ion-accordion value="fourth">
+        <ion-item slot="header" color="light">
+          <ion-label id="ion-accordion-header"><ion-icon id="aide-icons" src="../../assets/icon/question_exchange.svg"></ion-icon>{{ 'FAQ' | translate }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Fourth Content</div>
+      </ion-accordion>
+      <ion-accordion value="fifth">
+        <ion-item slot="header" color="light">
+          <ion-label id="ion-accordion-header"><ion-icon  id="aide-icons" src="../../assets/icon/call_quality.svg"></ion-icon>{{ 'CONTACT_US' | translate }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Fifth Content</div>
+      </ion-accordion>
+      <ion-accordion value="sixth">
+        <ion-item slot="header" color="light">
+          <ion-label id="ion-accordion-header"><ion-icon  id="aide-icons" src="../../assets/icon/comment.svg"></ion-icon>{{ 'TERMS_AND_CONDITIONS' | translate }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Sixth Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
+</ion-content>

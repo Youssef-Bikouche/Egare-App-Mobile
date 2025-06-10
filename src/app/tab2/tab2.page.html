@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-title-header-text">{{ 'SEARCH_TICKET_TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Rechercher votre ticket</h1>
+  <ion-icon class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+  <p>{{ 'ENTER_TICKET_INFO' | translate }}</p>
+  <ion-card>
+    <ion-card-content>
+      <form id="form-tab2" action="" [formGroup]="loginForm" (ngSubmit)="checkTicket()">
+        <ion-label position="stacked"><ion-icon name="ticket-outline"></ion-icon>{{ 'ENTER_TICKET_CODE' | translate }}</ion-label>
+        <ion-input style="text-indent: 10px;" formControlName="code" type="text" placeholder="{{ 'TICKET_NUMBER' | translate }}"></ion-input>
+        <ion-text style="margin-bottom: 15px;" color="danger" *ngIf="loginForm.get('code')?.hasError('required') && loginForm.get('code')?.touched">
+         *Code is required
+        </ion-text>
+        <ion-label style="margin-top: 15px;" position="stacked"><ion-icon src="../../assets/icon/p2p (1).svg"></ion-icon>{{ 'ENTER_PHONE_NUMBER' | translate }}</ion-label>
+        <ion-input style="text-indent: 10px;" formControlName="phone" type="tel" placeholder="{{ 'PHONE_PLACEHOLDER' | translate }}"></ion-input>
+        <ion-text color="danger" *ngIf="loginForm.get('phone')?.hasError('required') && loginForm.get('code')?.touched">
+          *phone is required
+         </ion-text>
+         <ion-text color="danger" *ngIf="loginForm.get('phone')?.hasError('pattern') && loginForm.get('code')?.touched">
+          *phone is invalid
+         </ion-text>
+        <ion-button type="submit" class="custom-button-style" expand="block">{{ 'SEARCH_TICKET_BUTTON' | translate }}</ion-button>
+      </form>
+      <ion-toast id="errorMessage" color="danger" [isOpen]="isErrorMessage" message="*Veuillez remplir correctement tous les champs du formulaire" [duration]="2000"></ion-toast>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

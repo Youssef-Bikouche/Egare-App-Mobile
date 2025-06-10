@@ -1,0 +1,74 @@
+<ion-content class="content-background" [class.dark-theme]="darkModeService.darkModeEnabled">
+  
+  <div class="log-div">
+    <ion-img class="logo" src="../../assets/img/logos/egare-logo-color-512.png"></ion-img>
+  </div>
+
+  <ion-icon *ngIf="!darkModeService.darkModeEnabled" class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+  <div class="dark-mode-icon">
+    <ion-icon src="../../assets/icon/nightlight.svg" (click)="toggleDarkMode()"></ion-icon>
+  </div>
+  <p id="header-text">{{ 'CREATE_ACCOUNT' | translate }}</p>
+  <ion-card class="login-card">
+    <ion-card-content>
+     
+         <form [formGroup]="loginForm" (ngSubmit)="verifyInputs()">
+          <ion-label class="login-label"><ion-icon src="../../assets/icon/person (2).svg"></ion-icon> {{ 'LAST_NAME' | translate }}:</ion-label>
+          <ion-input formControlName="nom" class="login-input" type="text" placeholder="{{ 'ENTER_LAST_NAME' | translate }}"></ion-input>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('nom')?.hasError('required') && loginForm.get('nom')?.touched">
+            {{ 'FIELD_REQUIRED' | translate }}
+          </ion-text>
+          <ion-text size="small" id="error-message" color="danger" *ngIf="loginForm.get('nom')?.hasError('minlength') && loginForm.get('nom')?.touched">
+            {{ 'MINIMUM_CHARACTERS' | translate }}
+          </ion-text>
+          
+        
+          <ion-label class="login-label"><ion-icon src="../../assets/icon/person (2).svg"></ion-icon> {{ 'FIRST_NAME' | translate }}:</ion-label>
+          <ion-input formControlName="prenom" class="login-input" type="text" placeholder="{{ 'ENTER_FIRST_NAME' | translate }}"></ion-input>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('prenom')?.hasError('required') && loginForm.get('prenom')?.touched">
+            {{ 'FIELD_REQUIRED' | translate }}
+          </ion-text>
+        
+          <ion-label class="login-label"><ion-icon src="../../assets/icon/p2p (1).svg"></ion-icon> {{ 'PHONE' | translate }}:</ion-label>
+          <ion-input formControlName="phone" class="login-input" type="tel" placeholder="{{ 'ENTER_PHONE' | translate }}"></ion-input>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('phone')?.hasError('required') && loginForm.get('phone')?.touched">
+            {{ 'FIELD_REQUIRED' | translate }}
+          </ion-text>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('phone')?.hasError('pattern') && loginForm.get('phone')?.touched">
+            {{ 'INVALID_PHONE_NUMBER' | translate }}
+          </ion-text>
+        
+          <ion-label class="login-label"><ion-icon src="../../assets/icon/mail.svg"></ion-icon> {{ 'EMAIL' | translate }}:</ion-label>
+          <ion-input formControlName="email" class="login-input" type="email" placeholder="{{ 'ENTER_EMAIL' | translate }}"></ion-input>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">
+            {{ 'FIELD_REQUIRED' | translate }}
+          </ion-text>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched">
+            {{ 'INVALID_EMAIL_ADDRESS' | translate }}
+          </ion-text>
+        
+          <ion-label class="login-label"><ion-icon src="../../assets/icon/lock.svg"></ion-icon>{{ 'PASSWORD' | translate }}:</ion-label>
+          <ion-input formControlName="password" class="login-input" [type]="passwordVisible ? 'text' : 'password'" placeholder="{{ 'ENTER_PASSWORD' | translate }}">
+            <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="togglePasswordVisibility()">
+              <ion-icon id="password-eye-icon" slot="icon-only" [name]="passwordVisible ? 'eye' : 'eye-off'" aria-hidden="true"></ion-icon>
+            </ion-button>
+          </ion-input>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+            {{ 'FIELD_REQUIRED' | translate }}
+          </ion-text>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched && loginForm.get('password')?.hasError('pattern') && loginForm.get('password')?.touched">
+            {{ 'MINIMUM_CHARACTERS' | translate }} <br>
+          </ion-text>
+          <ion-text id="error-message" color="danger" *ngIf="loginForm.get('password')?.hasError('pattern') && loginForm.get('password')?.touched">
+            {{ 'PASSWORD_REQUIREMENTS' | translate }}  
+          </ion-text>
+        
+          <ion-button class="custom-button-style" type="submit" expand="block">{{ 'REGISTER' | translate }}</ion-button>
+        </form>
+       
+        <ion-toast id="errorMessage" color="danger" [isOpen]="isErrorMessage" message="{{ 'PLEASE_FILL_OUT_FORM' | translate }}" [duration]="2000"></ion-toast>
+    </ion-card-content>
+  </ion-card>
+  <p id="p2">{{ 'ALREADY_HAVE_ACCOUNT' | translate }} <span style="color: rgba(242, 145, 35, 1);text-decoration: underline;" > <a [routerLink]="['/identification']">{{ 'LOG_IN' | translate }}</a></span></p>
+
+</ion-content>

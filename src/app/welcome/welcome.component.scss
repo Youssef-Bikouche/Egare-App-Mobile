@@ -1,0 +1,111 @@
+.logo-welcome {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 115px;
+  height: 42px;
+}
+
+.bg-welcome{
+    width: 268px;
+    height: 272px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+#p1{
+   color: var(--text-color-light);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#p2{
+    color: #AEAEAE;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+}
+.welcome-page-button{
+  color: white;
+  max-height: 60px;
+  min-width: 30%;
+  height: 0px !important;
+  font-weight: 600;
+  font-size: 12px;
+  --background: rgba(242, 145, 35, 1);
+  --border-radius: 20px;
+}
+.buttons-container{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+#p3{
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
+#p3 a{
+  text-decoration: none;
+  color: #B1B1B1;
+  text-align: center;
+}
+
+
+/* Adjustments for tablet (iPad) screens */
+@media (min-width: 768px) {
+    .welcome-content {
+      padding: 40px; /* Add padding to the content area */
+    }
+  
+    .logo-welcome {
+      position: absolute;
+      width: 150px; /* Increase logo width for larger screens */
+      height: 55px; /* Increase logo height for larger screens */
+      left: 50%;
+      transform: translateX(-50%);
+      top: 40px; /* Adjust top position as needed */
+  }
+  
+    .bg-welcome {
+      width: 460px; /* Make background image fill the container */
+      height: 420px; /* Allow background image to adjust its height */
+      margin: 0 auto; /* Center horizontally */
+      margin-top:150px; /* Adjust margin-top for spacing */
+    }
+  
+    #p1 {
+      font-size: 24px; /* Increase font size for larger screens */
+      margin-top: 30px; /* Adjust top margin */
+      
+    }
+  
+    #p2 {
+      font-size: 18px; /* Increase font size for larger screens */
+      margin-top: 10px; /* Adjust top margin */
+    }
+  
+    .welcome-page-button {
+      height: 50px !important; /* Adjust button height */
+      font-size: 16px; /* Increase font size for larger screens */
+      min-width: 15%;
+      --width: 100px!important;
+      font-size: small;
+      text-transform: none!important;
+    }
+  
+    .buttons-container {
+      margin-top: 100px; /* Adjust top margin for buttons */
+      max-width: 50%;
+    }
+  
+    #p3 {
+      font-size: 15px; /* Increase font size for larger screens */
+      margin-top: 30px; /* Adjust top margin */
+    }
+}
+  

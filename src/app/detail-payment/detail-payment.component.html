@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <ion-img class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-img>
+  <ion-img class="logo" src="../../assets/img/logos/egare-logo-color-512.png"></ion-img>
+
+  <div class="details-container">
+    <div class="details-container-header">{{'PAYMENT_DETAILS' | translate}} </div>
+    <div class="details-container-content">
+      <!-- Insert payment details here if needed -->
+    </div>
+  </div>
+
+  <div class="details-container">
+    <div class="details-container-header">{{'ORDER_DETAILS' | translate}}</div>
+    <div class="details-container-content">
+      <p>Identifiant: {{identifiant}}</p>
+      <p>Trajet: Voyage de {{ ticketDetails.departureLocation }} vers {{ ticketDetails.arrivalLocation }} le {{ ticketDetails.departureDay }} {{ ticketDetails.departureTime }}</p>
+      <p>Montant: {{ price }} MAD</p>
+    </div>
+  </div>
+
+  <div class="details-container">
+    <div class="details-container-header">{{'TRAVEL_DETAILS' | translate}}</div>
+    <div class="details-container-content">
+      <p>{{'TRAVEL_COMPANY' | translate}}: {{ ticketDetails.companyName }}</p>
+      <p>{{'DEPARTURE_DATE' | translate}}: {{ ticketDetails.departureDay }}</p>
+      <p>{{'DEPARTURE_TIME' | translate}}: {{ ticketDetails.departureTime }}</p>
+      <p>{{'DEPARTURE_ADDRESS' | translate}}: Boulevard Aboubaker Seddik</p>
+    </div>
+  </div>
+
+  <div class="details-container">
+    <div class="details-container-header"></div>
+    <div class="details-container-content">
+      <p>E-MAIL: {{ email }}</p>
+    </div>
+  </div>
+
+  <div class="confirmation-buttons">
+    <ion-button (click)="confirmPayment()" color="danger">{{'CONFIRM_PAYMENT' | translate}}</ion-button>
+    <ion-button id="annuler-btn" color="success">{{'CANCEL' | translate}}</ion-button>
+  </div>
+</ion-content>

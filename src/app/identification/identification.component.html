@@ -1,0 +1,52 @@
+<ion-content class="content-background" [class.dark-theme]="darkModeService.darkModeEnabled">
+  <a [routerLink]="['/welcome']">
+    <div class="close-icon-container">
+      <ion-icon class="close-icon" src="../../assets/icon/close-icon-2.svg"></ion-icon>
+    </div> 
+  </a>
+ 
+  <div class="log-div">
+    <ion-img  class="logo" src="../../assets/img/logos/egare-logo-color-512.png"></ion-img>
+  </div>
+  <ion-icon *ngIf="!darkModeService.darkModeEnabled" class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+  <div class="dark-mode-icon">
+    <ion-icon src="../../assets/icon/nightlight.svg" (click)="toggleDarkMode()"></ion-icon>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <p>{{'CONNECT_LOGIN' | translate}}</p>
+    <ion-card class="login-card">
+      <ion-card-content>
+        <ion-label class="login-label"><ion-icon src="../../assets/icon/mail.svg"></ion-icon> Email:</ion-label>
+        <ion-input 
+          class="login-input" 
+          type="email" 
+          placeholder="Saisissez votre Email" 
+          formControlName="email">
+        </ion-input>
+        <ion-text *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched" class="error-text" color="danger">*champ obligatoire</ion-text>
+        <ion-text *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="error-text" color="danger">Invalid email</ion-text>
+        <ion-label class="login-label"><ion-icon src="../../assets/icon/lock.svg"></ion-icon>{{'PASSWORD_PLACEHOLDER' | translate}} :</ion-label>
+        <ion-input 
+          class="login-input" 
+          labelPlacement="stacked" 
+          type="{{ passwordVisible ? 'password' : 'text' }}" 
+          placeholder="************" 
+          formControlName="password">
+          <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="togglePasswordVisibility()">
+            <ion-icon id="eye-icon" slot="icon-only" [name]="passwordVisible ? 'eye-off' : 'eye'" aria-hidden="true"></ion-icon>
+          </ion-button>
+        </ion-input>
+        <ion-text *ngIf="loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)" class="error-text" color="danger">Password is required</ion-text>
+        <ion-text *ngIf="loginForm.get('password')?.hasError('minlength') && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)" class="error-text" color="danger">Password must be at least 8 characters long</ion-text>
+        
+
+        
+        <ion-button type="submit" class="custom-button-style" expand="block">{{'LOGIN_BUTTON' | translate}}</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+ 
+  <ion-toast id="errorMessage" color="danger" [isOpen]="isErrorMessage" message="{{errorMessage}}" [duration]="2000"></ion-toast>
+  <p id="p1">{{'FORGOT_PASSWORD' | translate}}</p>
+  <p id="p2">{{'CREAT_ACCOUNT' | translate}} <span style="color: rgba(242, 145, 35, 1);text-decoration: underline;" ><a [routerLink]="['/registration']">S’inscrire</a></span></p>
+</ion-content>

@@ -1,0 +1,156 @@
+<ion-header>
+    <ion-toolbar >
+      <div class="destination-container">
+          <ion-icon src="../../assets//icon//expand_more.svg" (click)="goBackToTickets()"></ion-icon>
+          <div><p id="p1"><strong>{{ticket.departureLocation}} > {{ticket.arrivalLocation}} </strong></p><br> <p id="p2">{{ formattedDate | date:'EEEE dd MMMM, yyyy' }} </p></div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  
+
+<ion-content [fullscreen]="true">
+  <ion-icon class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+     
+      <ion-card class="payment-ticket-trajet" (click)="toggleCrad()">
+        <ion-card-header >
+          <div class="payment-ticket-trajet-header">
+            <div class="trajet-div1">
+              <p>{{ticket.companyName}} </p>
+              <p>prix ({{passengersCount}} <ion-icon src="../../assets/icon/person.svg"></ion-icon>) </p>
+            </div>
+            <div class="trajet-div2">
+              <p>{{ticket.departureTime}} - {{ticket.arrivalTime}}</p>
+              <p>{{passengersCount * ticket.priceValue}} dh</p>
+            </div> 
+  
+            <div class="trajet-div3">
+               <ion-icon src="../../assets/icon/expand_more (2).svg"></ion-icon>
+            </div>
+          </div>
+        </ion-card-header>
+        <ion-card-content *ngIf="isTicketTrajectory">
+          <div class="ticket-trajectory-infos">
+             <div>
+              {{'SEAT_NUMBERS' | translate}}  : {{ticket.selectedSeats}}
+             </div>
+
+             <div class="ticket-trajectory-infos-div2" >
+                 <div><p>{{ticket.departureTime}} <br>  {{ticket.arrivalTime}}</p></div>
+                 <div><ion-icon class="trajectory-icon" src="../../assets/icon/trajectory.svg"></ion-icon></div>
+                 <div>{{ticket.departureLocation}} <br><span class="address-routiere">Boulevard Aboubaker Seddik</span> <br> {{ticket.arrivalLocation}} <span  class="address-routiere">Gare Routiére Municipale</span></div>
+             </div>
+          </div>
+        
+        </ion-card-content>
+      </ion-card>
+
+      <div class="se-connecter">
+         <div id="connecter-text">{{'CONNECT_TO_EARN_POINTS' | translate}} <br><strong style="color: #EE9B46;"> points <ion-icon src="../../assets/icon/featured_seasonal_and_gifts.svg"></ion-icon></strong> </div>
+         <ion-button id="connect-btn"><ion-icon slot="start" src="../../assets/icon/logout.svg"></ion-icon> Se connecter</ion-button>
+      </div>
+
+      <h1>CONTACT</h1>
+      <form [formGroup]="contactForm" class="contact-form" >
+        <ion-label><ion-icon src="../../assets/icon/p2p (1).svg"></ion-icon> Téléphone :</ion-label>
+        <ion-input formControlName="telephone" style="text-indent: 10px;" type="tel" placeholder="Phone number"></ion-input>
+        <ion-text *ngIf="contactForm.get('telephone')?.hasError('required') && contactForm.get('telephone')?.touched" class="error-text" color="danger">*champ obligatoire</ion-text>
+        <ion-text *ngIf="contactForm.get('telephone')?.hasError('pattern') && contactForm.get('telephone')?.touched" class="error-text" color="danger">Invalid phone number</ion-text>
+      
+        <ion-label position="stacked"><ion-icon src="../../assets/icon/mail.svg"></ion-icon> Email :</ion-label>
+        <ion-input formControlName="email" style="text-indent: 10px;" type="text" placeholder="Saisissez votre email"></ion-input>
+        <ion-text *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" class="error-text" color="danger">*champ obligatoire</ion-text>
+        <ion-text *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched" class="error-text" color="danger">Invalid email</ion-text>
+        
+      </form>
+      
+      <h1>{{'PAYMENT_METHOD' | translate}} </h1>
+
+      <div class="paiment-method-container">
+        <div>
+          <ion-checkbox labelPlacement="end" [checked]="selectedPaymentMethod === 'credit-card'" (click)="selectPaymentMethod('credit-card')"><strong>{{ 'CREDIT_CARD' | translate }}</strong> </ion-checkbox>
+          <ion-icon class="payment-icon" src="../../assets/icon/groupe visa.svg"></ion-icon>
+          <ion-icon class="help-icon" src="../../assets/icon/help.svg"></ion-icon>
+        </div>
+      
+        <div>
+          <ion-checkbox labelPlacement="end" [checked]="selectedPaymentMethod === 'cash'" (click)="selectPaymentMethod('cash')"> <strong>{{ 'CHECKBOX_LABEL' | translate }}</strong><br>
+            <br>
+            {{ 'RECEIVE_CODE' | translate }} <br>
+            {{ 'PAY_AT_AGENCY' | translate }} <br>
+            {{ 'ACCEPTED_AGENCIES' | translate }} <br>
+            {{'DAMANE_CASH' | translate}}<br>
+           <strong> {{ 'EXPIRES_IN' | translate }}</strong></ion-checkbox>
+        </div>
+       
+        <div>
+          <ion-checkbox labelPlacement="end" [checked]="selectedPaymentMethod === 'bank-app'" (click)="selectPaymentMethod('bank-app')">  <strong>{{ 'CHECKBOX_LABEL2' | translate }}</strong> <br><br>
+            {{ 'RECEIVE_CODE' | translate }} <br>
+            <strong>{{ 'EXPIRES_IN' | translate }}</strong> <br>
+            {{ 'PAY_VIA_APP' | translate }} <strong> <br>{{ 'SUPPORTED_BANKS' | translate }}</strong> <br> <strong>{{ 'SOCIETEE' | translate }}</strong></ion-checkbox>
+          <ion-icon class="help-icon" src="../../assets/icon/help.svg"></ion-icon>
+        </div>
+      </div>
+      
+
+      <div class="policies-container">
+        <div>
+          <ion-toggle   
+          [(ngModel)]="acceptPromotionalOffers" 
+          labelPlacement="end"
+        >
+          {{ 'TOGGLE_FIRST_LINE' | translate }}<br>{{ 'TOGGLE_SECOND_LINE' | translate }}
+        </ion-toggle><br /><br />
+        
+        </div>
+
+        <div>
+          <ion-toggle   
+            [(ngModel)]="acceptTermsAndConditions" 
+            labelPlacement="end"
+          >
+            {{ 'TOGGLE_FIRST_LINE2' | translate }}<br>
+            {{ 'TOGGLE_SECOND_LINE2' | translate }}<br>
+            {{'TOGGLE_THIRD_LINE2' | translate}}<br>
+            <span style="color: #B5B5B5;margin-top: 20px;text-decoration: underline;">{{ 'TERMS_AND_CONDITIONS_LINK2' | translate }}</span>
+            </ion-toggle><br /><br />
+
+        </div>
+      </div>
+       
+      <div class="payment-infos">
+          <div class="payment-infos-div">
+            <p style="display: flex;align-items: center;justify-content: space-around;">{{'PRICE' | translate}}({{passengersCount}} <ion-icon src="../../assets/icon/person.svg"></ion-icon>)</p>
+            <p>{{passengersCount * ticket.priceValue}} DH</p>
+          </div>
+
+          <div  class="payment-infos-div">
+            <p>{{'RESERVATION_FEE' | translate}}</p>
+            <p>{{'OFFERED' | translate}}</p>
+          </div>
+
+          <div  class="payment-infos-div">
+            <p>{{'YOU_WILL_PAY' | translate}}</p>
+            <p>{{ticket.priceValue * passengersCount}} DH</p>
+          </div>
+
+          <div  class="payment-infos-div">
+ 
+          <ion-button  class="custom-style-button" id="payment-button" (click)="buyTickets()">{{'PAY_WITH_CREDIT_CARD' | translate}}</ion-button>
+          </div>
+          <ion-toast id="errorMessage" color="danger" [isOpen]="isErrorMessage" message={{errorMessage}} [duration]="2000"></ion-toast>
+      </div>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+

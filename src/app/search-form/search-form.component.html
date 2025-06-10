@@ -1,0 +1,117 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" [class.dark-theme]="darkModeService.darkModeEnabled"> 
+  <div id="form-recherche" >
+      <!-- <div class="switch-city" (click)="switchCity()"><ion-icon src="../../assets//icon/change.svg"></ion-icon></div> -->
+      <ion-input label="{{'DEPARTURE_CITY'| translate}}" labelPlacement="floating" id="depart" color="warning" formControlName="departure" (click)="ControlDepartureModal()"  class="custom-input" type="text" [(ngModel)]="departCity"></ion-input>
+      <ion-input label="{{'ARRIVAL_CITY'| translate}}"  labelPlacement="floating" formControlName="arrival" (click)="ControlArrivalModal()"  class="custom-input" type="text" [(ngModel)]="arrivalCity"></ion-input>
+      <ion-input label="{{'DEPARTURE_DATE'| translate}}"  labelPlacement="floating" formControlName="dateDepart" id="date-input" class="custom-input" type="date" placeholder="Departure date" [(ngModel)]="dateDepart" [min]="minDate"></ion-input>
+      <ion-input label="Passengers" labelPlacement="floating" formControlName="passangerCount" (click)="OpenPassangerModal()" id="top-center" class="custom-input" type="text" [(ngModel)]="passangerCount" min="1" max="8">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+      </ion-input>
+  
+      
+        
+      
+  
+      <ion-button type="submit" class="custom-button-style" id="recherche-button" expand="block">  
+        Rechercher <ion-icon  name="chevron-forward-outline"></ion-icon>
+      </ion-button> 
+  </div>
+</form>
+<ion-modal [isOpen]="isDepartureModalOpen" [class.dark-theme]="darkModeService.darkModeEnabled">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title id="modal-title-vdepart"> {{'SELECT_DEPARTURE_CITY' | translate}}</ion-title>
+        <ion-buttons slot="end">
+          <ion-icon id="close-icon-vdepart" src="../../assets/icon/close-icon-1.svg" (click)="ControlDepartureModal()">{{ 'CLOSE' | translate }}</ion-icon>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+       <ion-item id="input-item-vdepart">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input placeholder="{{ 'ENTER_DEPARTURE_CITY' | translate }}" [(ngModel)]="departCity" (ionInput)="findDestination(1)"></ion-input>
+       </ion-item>
+
+       
+
+       <ion-card id="cities-card">
+        <ion-list>
+          <ion-item class="historique-item" lines="none">
+            {{ 'HISTORY' | translate }}
+          </ion-item>
+          <ion-item *ngFor="let city of resultSearch" lines="none" (click)="selectCity(city,1)">
+            <ion-icon style="width: 15px;height: 15px;" slot="start" src="../../assets/icon/position.svg"></ion-icon>
+            {{ city }}
+            
+          </ion-item>
+          <ion-item *ngIf="notFound" lines="none">
+            {{ notFound }}
+          </ion-item>
+          
+        </ion-list>
+      </ion-card>
+
+    </ion-content>
+
+   
+  </ng-template>
+</ion-modal>
+
+
+<ion-modal [isOpen]="isArrivalModalOpen" [class.dark-theme]="darkModeService.darkModeEnabled">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title id="modal-title-vdepart">{{ 'SELECT_ARRIVAL_CITY' | translate }}</ion-title>
+        <ion-buttons slot="end">
+          <ion-icon id="close-icon-vdepart" src="../../assets/icon/close-icon-1.svg" (click)="ControlArrivalModal()">{{ 'CLOSE' | translate }}</ion-icon>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+       <ion-item id="input-item-vdepart">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+         <ion-input placeholder="{{ 'ENTER_ARRIVAL_CITY' | translate }}" [(ngModel)]="arrivalCity" (ionInput)="findDestination(2)"></ion-input>
+       </ion-item>
+
+       
+
+       <ion-card id="cities-card">
+        <ion-list>
+          <ion-item class="historique-item" lines="none">
+            {{ 'HISTORY' | translate }}
+          </ion-item>
+          <ion-item *ngFor="let city of resultSearch" lines="none" (click)="selectCity(city,2)">
+            <ion-icon style="width: 15px;height: 15px;" slot="start" src="../../assets/icon/position.svg"></ion-icon>
+            {{ city }}
+          </ion-item>
+          <ion-item *ngIf="notFound" lines="none">
+            {{ notFound }}
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+    </ion-content>
+
+   
+  </ng-template>
+</ion-modal>
+
+
+<ion-modal [isOpen]="isPassangerModal"  id="passanger-card" [class.dark-theme]="darkModeService.darkModeEnabled">
+  <ng-template>
+    <div class="passangers-container">
+      <p>{{ 'SELECT_PASSENGER_COUNT' | translate }}</p>
+      <div id="passanger-div">
+        <div id="div1" (click)="decrementNumber()">  <ion-icon src="../../assets/icon/passagerb.svg"></ion-icon>  </div>
+        <div id="div2">{{passangerCount}}</div>
+        <div id="div3" (click)="incrementNumber()"> <ion-icon src="../../assets/icon/passagerplus.svg">2</ion-icon></div>
+      </div>
+      <div><ion-button  class="passanger-button" (click)="closePopover()">{{ 'CONFIRM' | translate }}</ion-button></div>
+    </div>
+    
+  </ng-template>
+</ion-modal>

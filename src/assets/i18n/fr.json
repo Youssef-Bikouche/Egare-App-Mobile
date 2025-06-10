@@ -1,0 +1,181 @@
+{    "_comment": "translation for ticket consultation",
+    "SEARCH_TICKET_TITLE": "Recherche de Votre ticket",
+    "ENTER_TICKET_INFO": "Merci de renseigner les informations suivantes pour consulter vos tickets",
+    "ENTER_TICKET_CODE": "Code de ticket(s)",
+    "TICKET_NUMBER": "numéro de ticket",
+    "ENTER_PHONE_NUMBER": "Téléphone",
+    "PHONE_PLACEHOLDER": "",
+    "SEARCH_TICKET_BUTTON": "Consulter mon Ticket",
+
+
+    "_comment": "translation for recherche ticket ",
+    "RECHERCHE_TITLE": "Recherche",
+    "HELLO": "Bonjour",
+    "WHERE_ARE_YOU_GOING": "Où allez-vous aujourd'hui ?",
+    "SEARCH_YOUR_NEXT_BUS": "Recherchez votre prochain BUS parmi +600 départs",
+    
+
+    
+    "_comment": "translation for aide  ",
+    "SEARCH_TITLE": "En quoi peut-on vous aider ?",
+  "EGARE_SERVICE": "EGARE est à votre service !",
+  "ABOUT_US": "A propos de nous",
+  "HOW_TO_BOOK": "Comment réserver sur EGARE ?",
+  "FAQ": "Questions fréquentes ?",
+  "CONTACT_US": "Contactez-nous !",
+  "TERMS_AND_CONDITIONS": "Conditions Générales d’Utilisations",
+
+  "_comment": "translation for login page",
+  "LOGIN_TITLE": "Connectez-vous",
+  "LOGIN_HEADER": "Connectez-vous pour continuer",
+  "EMAIL_PLACEHOLDER": "Email",
+  "PASSWORD_PLACEHOLDER": "Mot de passe ",
+  "LOGIN_BUTTON": "Se Connecter",
+  "REGISTER_HEADER": "S'inscrire",
+  "FORGOT_PASSWORD_HEADER": "Mot de passe oublié",
+  "CONNECT_YOU": "Connectez-vous",
+
+
+  "ACCOUNT_HEADER": "Mon compte",
+  "LOGIN": "Se connecter",
+  "LOGOUT": "Se déconnecter",
+  "MENU_HEADER": "Menu",
+  "SEARCH_TICKETS": "Chercher tickets",
+  "ABOUT": "À propos",
+  "HOW_IT_WORKS": "Comment ça marche ?",
+  "SUPPORT": "Support",
+  "SETTINGS_HEADER": "Paramétrage",
+  "DARK_MODE": "Mode sombre",
+
+
+  "DEPARTURE_CITY": "Ville de départ",
+  "ARRIVAL_CITY": "Ville d'arrivée",
+  "DEPARTURE_DATE": "Date de départ",
+  "PASSENGERS": "Passagers",
+  "SEARCH": "Rechercher",
+  "SELECT_DEPARTURE_CITY": "Sélectionner votre ville de départ",
+  "CLOSE": "Fermer",
+  "ENTER_DEPARTURE_CITY": "Entre la ville de départ",
+  "HISTORY": "Historique",
+  "SELECT_ARRIVAL_CITY": "Sélectionner votre ville d'arrivée",
+  "ENTER_ARRIVAL_CITY": "Entre la ville d'arrivée",
+  "SELECT_PASSENGER_COUNT": "Sélectionner le nombre de passagers",
+  "CONFIRM": "Confirmer",
+
+
+  "SORT_BY": "Trier par",
+  "FILTER_BY": "Filtrer par",
+  "MODIFY_SEARCH": "Modifier votre recherche",
+  "MODIFY_SEARCH_HEADER": "Modifier votre recherche",
+  "FILTER_MODAL_HEADER": "Filtrer par",
+  "SORT_MODAL_HEADER": "Trier par",
+  "DEPARTURE": "Départ",
+  "ARRIVAL": "Arrivée",
+ 
+  "APPLY_FILTERS": "Appliquer les filtres",
+  "TICKET_DETAILS": "Détails du billet",
+  "DETAILS_OF_TRAVEL": "Détails du voyage",
+   
+  "BUY": "Acheter",
+  "SEATS": "Sièges",
+  "PRICE": "Prix",
+   
+   "_comment": "trie options",
+  "EARLIEST_DEPARTURE": "Le départ le plus tôt",
+  "LATEST_DEPARTURE": "Le départ le plus tard",
+  "MOST_EXPENSIVE_DEPARTURE": "Le départ le plus cher",
+  "LEAST_EXPENSIVE_DEPARTURE": "Le départ le moins cher",
+  "FASTEST": "Le plus rapide",
+  "FROM_A_TO_Z": "De A à Z",
+  "FROM_Z_TO_A": "De Z à A",
+
+
+  "DEPARTURE_LOCATION": "Lieu de départ",
+  "ARRIVAL_LOCATION": "Lieu d'arrivée",
+  "COMPANY_NAME": "Nom de la compagnie",
+  "SEAT_NUMBERS": "Numéros de sièges",
+  "CONNECT_TO_EARN_POINTS": "Connectez-vous pour gagner des ",
+  "SIGN_IN": "Se connecter",
+  "CONTACT": "Contact",
+  "TELEPHONE": "Téléphone",
+  "REQUIRED_FIELD": "Champ obligatoire",
+  "INVALID_PHONE_NUMBER": "Numéro de téléphone invalide",
+  "EMAIL": "Email",
+  "INVALID_EMAIL": "Email invalide",
+  "PAYMENT_METHOD": "MODE DE PAIMENT",
+  "CREDIT_CARD": "Carte de crédit",
+  "CASH": "Espèces",
+  "BANK_APP": "Application bancaire",
+  "ACCEPT_PROMOTIONAL_OFFERS": "Accepter les offres promotionnelles",
+  "ACCEPT_TERMS_AND_CONDITIONS": "Accepter les conditions générales",
+  "RESERVATION_FEE": "Frais de réservation",
+  "OFFERED": "Offerts",
+  "YOU_WILL_PAY": "Vous allez payer",
+  "PAY_WITH_CREDIT_CARD": "Payer par carte de crédit",
+  "CASH_PAYMENT_EXPLANATION": "Vous allez recevoir un code Fatourati que vous devez payer dans une agence CASHPLUS, FAWATIR, Lana Cash ou DAMANE Cash aujourd'hui (Expire dans 20 minutes)",
+  "BANK_APP_PAYMENT_EXPLANATION": "Vous allez recevoir un code Fatourati (Expire dans 20 minutes) que vous devez payer via votre application bancaire CIH, BMCE, Crédit Agricole et Société Générale.",
+
+
+  "CONFIRM_PAYMENT": "Valider le paiment ",
+   "CANCEL": "Annuler",
+   "TRAVEL_COMPANY": "Compagnie de voyage",
+    "DEPARTURE_DATE": "Date de départ",
+    "DEPARTURE_TIME": "Heure de départ",
+    "DEPARTURE_ADDRESS": "Adresse de départ",
+
+
+    "PAYMENT_DETAILS": "Détails de paiement",
+"ORDER_DETAILS": "Détails de la commande",
+"TRAVEL_DETAILS": "Détails du voyage",
+"CLIENT_INFORMATION": "Informations du client",
+
+
+
+"CONNECT_LOGIN": "Connectez-vous pour continuer",
+"FORGOT_PASSWORD": "J'ai oublié mon mot de passe",
+"CREAT_ACCOUNT": "Vous n'avez pas un compte?",
+
+"CHECKBOX_LABEL": "Espèce",
+"RECEIVE_CODE": "Vous allez recevoir un code Fatourati ",
+"PAY_AT_AGENCY": "vous devez payer dans une agence",
+"ACCEPTED_AGENCIES": "CASHPLUS, FAWATIR, Lana Cash ou",
+"DAMANE_CASH": "DAMANE Cash aujourd'hui",
+ 
+"CHECKBOX_LABEL2": "Application bancaire",
+  "EXPIRES_IN": "(Expire dans 20 minutes)",
+  "PAY_VIA_APP": "payer via votre application bancaire",
+  "SUPPORTED_BANKS": "CIH, BMCE, Crédit Agricole et",
+  "SOCIETEE":"Société Générale.",
+
+    "TOGGLE_FIRST_LINE": "J'accepte de recevoir les offres",
+    "TOGGLE_SECOND_LINE": "promotionnelles",
+  
+    "TOGGLE_FIRST_LINE2": "J'ai lu et j'accepte les conditions générales de vente,",
+    "TOGGLE_SECOND_LINE2": "notamment la mention relative à la protection des",
+    "TOGGLE_THIRD_LINE2": "  données personnelles",
+    "TERMS_AND_CONDITIONS_LINK2": "Conditions générales de vente",
+
+
+    
+      "CREATE_ACCOUNT": "Créez votre compte",
+      "LAST_NAME": "Nom",
+      "FIRST_NAME": "Prénom",
+      "PHONE": "Téléphone",
+      "PASSWORD": "Mot de passe",
+      "ENTER_LAST_NAME": "Saisissez votre Nom",
+      "ENTER_FIRST_NAME": "Saisissez votre Prénom",
+      "ENTER_PHONE": "Saisissez votre numéro",
+      "ENTER_EMAIL": "Saisissez votre email",
+      "ENTER_PASSWORD": "Saisissez votre mot de passe",
+      "FIELD_REQUIRED": "Champ obligatoire",
+      "MINIMUM_CHARACTERS": "Minimum 8 caractères",
+      "INVALID_EMAIL_ADDRESS": "Adresse email invalide",
+      "PASSWORD_REQUIREMENTS": "Le mot de passe doit contenir au moins 1 chiffre et 1 caractère",
+      "REGISTER": "S'inscrire",
+      "ALREADY_HAVE_ACCOUNT": "Vous avez déjà un compte ?",
+      "LOG_IN": "S'indentifier",
+      "PLEASE_FILL_OUT_FORM": "Veuillez remplir correctement tous les champs du formulaire"
+    
+    
+  }
+  

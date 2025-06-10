@@ -1,0 +1,165 @@
+
+
+<ion-header>
+  <ion-toolbar >
+    <div class="destination-container">
+        <ion-icon src="../../assets//icon//expand_more.svg" (click)="goBackRecherche()"></ion-icon>
+        <div><p id="p1">{{departure}} > {{arrival}} </p><br> <p id="p2">{{ formattedDate | date:'EEEE dd MMMM, yyyy' }}, {{passengers}} Passager </p></div>
+        <ion-icon src="../../assets//icon//search.svg" (click)="toggleSearchForm()"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true" >
+  <ion-icon class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+    <ion-modal [isOpen]="isSearchForm" class="form-recherche-modal" #modal trigger="open-custom-dialog" backdropDismiss="false">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>{{'MODIFY_SEARCH' | translate}}</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <app-search-form class="app-search-form" (searchClicked)="toggleSearchForm()"></app-search-form>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+  
+    <div class="filter-options">
+
+       <div (click)="trieModal()"> 
+          <ion-icon src="../../assets/icon/Group 45.svg"></ion-icon>
+          <p>{{'SORT_BY' | translate}}</p>
+       </div>    
+
+      <div (click)="filterModal()">
+          <p>{{'FILTER_BY' | translate}}</p>
+          <ion-icon src="../../assets/icon/discover_tune.svg"></ion-icon>
+      </div>
+
+    </div>
+          <!-- /* use this later  [initialBreakpoint]="0.5" [breakpoints]="[0, 0.25, 0.5, 0.75]"*/ -->
+      <ion-modal [isOpen]="isFilterOpen" class="filter-card" id="trie-card ">
+        <ng-template>
+
+            <div id="filter-modal-header">
+              <p>{{'FILTER_BY' | translate}}</p>
+              <ion-icon (click)="filterModal()" src="../../assets/icon/close-icon-2.svg"></ion-icon>
+            </div>
+            
+          <ion-content>
+            <p id="societe">Sociétés</p>
+            <div *ngFor="let company of companies" id="filter-option-div">
+              <ion-checkbox (ionChange)="CheckBoxCompany(company)"></ion-checkbox>
+              <label>{{ company }}</label>
+            </div>
+          </ion-content>
+  
+         
+        </ng-template>
+      </ion-modal>
+
+
+      <ion-modal [isOpen]="isTrieOpen"  id="trie-card" >
+        <ng-template>
+          
+            <div id="filter-modal-header">
+              <p>{{'SORT_BY' | translate}}</p>
+              <ion-icon (click)="trieModal()" src="../../assets/icon/close-icon-2.svg"></ion-icon>
+            </div>
+            
+          <ion-content>
+            <div  *ngFor="let option of trie"  id="filter-option-div">
+              <ion-checkbox id="checkbox-trie" (ionChange)="CheckBoxOption(option)"></ion-checkbox>
+              <label>{{ option }}</label>
+            </div>
+          </ion-content>
+  
+         
+        </ng-template>
+      </ion-modal>
+
+    <ion-card *ngFor="let ticket of tickets" class="ticket-card" >
+    <ion-card-header (click)="toggleTicket(ticket)">
+      <div class="ticket-div3">
+        <div>{{ ticket.title }}</div>
+        <div>
+          <p id="p-price1">Prix / <ion-icon src="../../assets/icon/person.svg"></ion-icon></p>
+          <p id="p-price2">{{ ticket.priceValue }} DH</p>
+        </div>
+      </div>
+      <div class="ticket-div2">
+        <div class="ticket-div2-label1">
+          <p id="time-depart">{{ ticket.departureTime }}</p>
+          <p>{{ ticket.departureLocation }} <ion-icon src="../../assets/icon/pngegg (9) 1.svg"></ion-icon></p>
+        </div>
+        <div class="ticket-div2-label2">
+          <div id="time-travel">{{ ticket.travelDuration }}</div>
+          <ion-icon id="fleche-icon" src="../../assets/icon/fleche.svg"></ion-icon>
+        </div>
+        <div class="ticket-div2-label3">
+          <p id="time-arrivee">{{ ticket.arrivalTime }}</p>
+          <p><ion-icon src="../../assets/icon/3848907 1.svg"></ion-icon>{{ ticket.arrivalLocation }}</p>
+        </div>
+      </div>
+      <div class="ticket-div1">
+        <div class="xxx">
+          <ion-icon id="company-icon" src="../../assets/icon/ctm-logo 1.svg"></ion-icon>
+          <div>
+            <p>{{ ticket.companyName }}</p>
+            <div class="confort-div">{{ ticket.comfortLabel }}</div>
+          </div>
+        </div>
+        <ion-icon id="number1-ticket" src="../../assets/icon/number-1-rankings-georgia-tech-40 1.svg"></ion-icon>
+      </div>
+    </ion-card-header>
+    <ion-card-content *ngIf="ticket.expanded">
+      <ion-item class="ticket-bus-header">
+        <p>{{departure}} > {{arrival}}</p>
+      </ion-item>
+      <div class="ticket-bus-details">
+
+            <div> <ion-icon class="info-icon" src="../../assets/icon/info.svg"></ion-icon>details du voyage <ion-icon class="expand-icon" src="../../assets/icon/expand_more (1).svg"></ion-icon> </div>
+      
+            <ion-icon src="../../assets/icon/Group 72.svg"></ion-icon>
+        
+      </div>
+      <div class="bus">
+        <ion-icon class="bus-wheel" src="../../assets/icon/car-steering-wheel-icon-png 1.svg"></ion-icon>
+        <div class="left-side">
+          <div class="seat"  *ngFor="let seat of leftSeats; let i = index" 
+               [class.reserved]="ticket.reservedSeats.includes(seat)"
+             
+               (click)="handleSeatClick(ticket,seat)">
+            <ion-icon [src]="getSeatIcon(ticket,seat)"></ion-icon>
+            <p>{{ seat }}</p>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="seat" *ngFor="let seat of rightSeats; let i = index" 
+               [class.reserved]="ticket.reservedSeats.includes(seat)"
+          
+               (click)="handleSeatClick(ticket,seat)">
+            <ion-icon [src]="getSeatIcon(ticket, seat)"></ion-icon>
+            <p>{{ seat }}</p>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+
+
+    <ion-modal [isOpen]="ticket.isTicketOpen" class="achat-card"  >
+      <ng-template>
+      <div class="achat-container">
+        <div class="acheter-container-left">
+            <div><ion-icon src="../../assets/icon/finance_chip.svg"></ion-icon>{{'PRICE' | translate}} ({{passengers}} <ion-icon src="../../assets/icon/person.svg"></ion-icon>): <span style="color: #F29123;">{{ passengers * (ticket.priceValue) }} DH</span></div>
+            <div><ion-icon src="../../assets/icon/airline_seat_recline_extra.svg"></ion-icon><p>{{'SEATS' | translate}}:</p> <span style="color: #F29123;">{{ticket.selectedSeats}}</span> </div>
+        </div>
+        <div class="buy-div"><ion-button class="buy-button" (click)="acheter(ticket)">{{'BUY' | translate}} ></ion-button></div>
+      </div>
+    </ng-template>
+    </ion-modal>
+  </ion-card>
+   
+</ion-content>

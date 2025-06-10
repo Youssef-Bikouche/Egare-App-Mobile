@@ -1,0 +1,157 @@
+
+
+.bg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/bg-autocar.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+.close-icon{
+  height: 12px;
+  width: 24px;
+}
+.close-icon-container{
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 212, 164, 1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card{
+  background: transparent!important; /* Sets the background of ion-card-content to transparent */
+  border-radius: 0; /* Removes border radius to make it square */
+  box-shadow: none; /* Removes any box shadow */
+  border: none; /* Removes border */
+}
+
+form{
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.login-input {
+  border:1px solid rgba(242, 145, 35, 1)!important;
+  border-radius: 13px;
+  margin-bottom: 30px; /* Adjust margin as needed */
+  margin-top: 15px;
+  width: 100%;
+  color: #B1B1B1;
+  height: 50px;
+  // background-color: #FFFFFF;
+  background-color: var(--ion-input-color);
+  justify-content: flex-start;
+  --highlight-color-focused: transparent !important; /* Removes the focus outline */
+  padding-left: 30px!important; /* Add padding inside the input */
+}
+
+
+p{
+  font-weight: 500;
+  color: var(--text-color-light);
+  text-align: center;
+}
+.log-div{
+  width: 178px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 80px;
+
+}
+.custom-button-style{
+  width: 140px;
+  height: 50px;
+  border-radius: 60px;
+  margin: 0 auto;
+  font-size: 11px;
+  margin-top: 20px;
+  
+}
+#p1{
+  font-weight: 500;
+  color: #F29123;
+  font-size: small;
+  margin-bottom: 20px;
+}
+#p2{
+  --background: var(#626262);
+  font-weight: 600;
+  font-size: small;
+}
+.login-label{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.login-label *{
+  margin: 10px;
+}
+#password-eye-icon{
+  width: 15px;
+  height:15px;
+  color: gray;
+}
+.input-bottom{
+  --highlight-color-focused: transparent !important; /* Removes the focus outline */
+  color: green;
+}
+
+#eye-icon{
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+#errorMessage{
+  width: 100%;
+  text-align: center;
+  
+}
+ion-text{
+  font-size: small;
+  text-align: start;
+  margin: 0px;
+  margin-top: -20px;
+  padding-left: 10px;
+}
+
+ion-toast{
+  color: white!important;
+  // --padding-bottom: 20px!important;
+}
+
+@media screen and (min-width: 750px) {
+  form{
+     width: 35%;
+  }
+  .custom-button-style{
+    margin-top: 120px;
+    --border-radius:20px;
+    margin-bottom: 25px;
+  }
+  p{
+    font-weight: 700;
+    text-transform:lowercase;
+  }
+  ion-text{
+    font-size: small;
+    text-align: start;
+    margin: 0px;
+  }
+  .login-input{
+    margin-bottom: 10px;
+  }
+}

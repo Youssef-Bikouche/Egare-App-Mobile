@@ -1,0 +1,272 @@
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/bg-autocar.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.05;
+  }
+  .destination-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+    position: relative;
+  }
+  .destination-container ion-icon{
+    position: absolute;
+    left: 20px;
+
+  }
+
+   ion-label{
+     display: flex;
+     align-items: center;
+     margin-top: 10px;
+   }
+  .payment-ticket-trajet{
+   border: 2px solid #B5B5B5;
+   width: 95%;
+   margin: 0 auto;
+   border-radius: 16px;
+   margin-top: 20px;
+   padding: 10px 5px;
+  }
+  .payment-ticket-trajet-header{
+    height: 100%!important;
+    width: 100%;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  .payment-ticket-trajet .trajet-div1,.trajet-div2,.trajet-div3{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    padding: 15px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    
+   
+  }
+  .trajet-div2{
+    margin-right: 30px;
+    color:#F29123;
+    font-weight: 700;
+    align-items: flex-end;
+    // border: 1px solid blue;
+  }
+  .trajet-div3{
+    width: 2%;
+    margin-right: 10px;
+    // border: 1px solid green;
+  }
+  .ticket-trajectory-infos{
+    width: 100%;
+    height: 100%;
+
+  }
+  .ticket-trajectory-infos-div2{
+    min-width: 80%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr; /* Adjust as needed */
+    height: 100%; 
+  }
+  .ticket-trajectory-infos-div2 div{
+    min-height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+  }
+  .ticket-trajectory-infos-div2 div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+  }
+
+.se-connecter{
+  width: 100%;
+  height: 70px;
+  background-color: #FFF3DE;
+  
+  border: 2px solid #FB8A46;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.se-connecter p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+.se-connecter ion-button{
+    background-color: #fff!important;
+    color: black;
+    min-width: 100px;
+    height: 22px;
+    font-weight: 500;
+    border-radius: 20px;
+    overflow: hidden;
+    --background: white;
+}
+.contact-form{
+    border: 1px solid #DADADA;
+    border-left: none;
+    border-right: none;
+    background-color: var(--ion-background-color);
+    padding: 20px;
+   
+}
+#connecter-text{
+  color: black;
+}
+ion-input {
+    width: 100% !important; /* Set the input width to 90% of the card */
+    min-height: 55px;
+    border: 1px solid #F29123;
+    border-radius: 12px!important;
+    margin: 15px auto; /* Add margin for spacing */
+    display: block; /* Ensure the input takes up full width */
+    width: 99%;
+    color: var(--text-color-light);
+    --highlight-color-focused: transparent !important; /* Removes the focus outline */
+  }
+
+  h1{
+    font-weight: 600;
+    font-size: 16px;
+    color: --var(#444444);
+    margin: 25px 25px;
+  }
+  .paiment-method-container{
+    background-color: var(--ion-background-color);
+    border: 1px solid #DADADA;
+    border-left: 0;
+    border-right: 0;
+    min-height: 500px;
+    padding: 20px auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .paiment-method-container div{
+    position: relative;
+    border: 1px solid #E3E3E3;
+    background-color: var(#fcfcfc);
+    width: 90%;
+    border-radius: 20px;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px auto;
+    font-weight: 200;
+    padding: 10px 5px;
+  }
+
+  .help-icon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .paiment-method-container div:nth-child(1){
+    position: relative;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+  }
+  .payment-icon{
+    height: 30px;
+    width: 250px;
+    padding-left: 30px;
+  }
+  .policies-container{
+    background-color: var(--ion-background-color);
+    margin: 20px 0px;
+    border: 1px solid #DADADA;
+
+  }
+  .policies-container div{
+    margin: 0px auto;
+    font-weight: 400;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  .payment-infos{
+    background-color: var(--ion-background-color);
+    width: 100%;
+    border: 1px solid #DADADA;
+    min-height: 224px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .payment-infos-div{
+    width: 100%;
+    // border: 1px solid red;
+    min-height: 24%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .payment-infos-div p:nth-child(2){
+    color: #F29123;
+  }
+#payment-button{
+    color: #FFFFFF;
+    margin: 0px auto;
+    --border-radius: 50px!important;
+    --border-width: 386px;
+    --paddding: 5px;
+    max-width: 40%;
+}
+.trajectory-icon{
+   height: 100px;
+   width: 12px;
+}
+.address-routiere{
+    color: #777777;
+    font-weight: 200;
+    font-size: 8px;
+}
+.error-text{
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-weight: 200;
+  font-size: small;
+}
+#errorMessage{
+  width: 100%;
+  text-align: center;
+  
+}
+
+
+ion-toast{
+  color: white!important;
+  // --padding-bottom: 20px!important;
+}

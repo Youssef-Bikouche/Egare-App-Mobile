@@ -1,0 +1,196 @@
+{   "_comment": "translation for ticket consultation",
+    "SEARCH_TICKET_TITLE": "Search Your Ticket",
+    "ENTER_TICKET_INFO": "Please enter the following information to search your tickets",
+    "ENTER_TICKET_CODE": "Ticket Code(s)",
+    "TICKET_NUMBER": "ticket number",
+    "ENTER_PHONE_NUMBER": "Phone Number",
+    "PHONE_PLACEHOLDER": "",
+    "SEARCH_TICKET_BUTTON": "Search My Ticket",
+
+
+    "_comment": "translation for recherche ticket ",
+    "RECHERCHE_TITLE": "Recherche",
+    "HELLO": "Hello",
+    "WHERE_ARE_YOU_GOING": "Where are you going today?",
+    "SEARCH_YOUR_NEXT_BUS": "Search for your next BUS among +600 departures",
+   
+    "_comment": "translation for aide  ",
+    "SEARCH_TITLE": "How can we help you?",
+    "EGARE_SERVICE": "EGARE is at your service!",
+    "ABOUT_US": "About us",
+    "HOW_IT_WORKS": "How it works?",
+    "HOW_TO_BOOK": "How to book on EGARE?",
+    "FAQ": "Frequently Asked Questions?",
+    "CONTACT_US": "Contact us!",
+    "TERMS_AND_CONDITIONS": "Terms and Conditions",
+
+    
+        "_comment": "translation for login page",
+        "LOGIN_TITLE": "Log in",
+        "LOGIN_HEADER": "Sign in to continue",
+        "EMAIL_PLACEHOLDER": " Email",
+        "PASSWORD_PLACEHOLDER": "password",
+        "LOGIN_BUTTON": "Log in",
+        "REGISTER_HEADER": "Sign up",
+        "FORGOT_PASSWORD_HEADER": "Forgot Password",
+        "CONNECT_YOU": "Connect",
+        
+        "_comment": "translation for ",
+        "ACCOUNT_HEADER": "My Account",
+        "LOGIN": "Log In",
+        "LOGOUT": "Log Out",
+        "MENU_HEADER": "Menu",
+        "SEARCH_TICKETS": "Search Tickets",
+        "ABOUT": "About",
+        "SUPPORT": "Support",
+        "SETTINGS_HEADER": "Settings",
+        "DARK_MODE": "Dark Mode",
+
+
+
+        "DEPARTURE_CITY": "Departure city",
+        "ARRIVAL_CITY": "Arrival city",
+        "DEPARTURE_DATE": "Departure date",
+        "PASSENGERS": "Passengers",
+        "SEARCH": "Search",
+        "SELECT_DEPARTURE_CITY": "Select your departure city",
+        "CLOSE": "Close",
+        "ENTER_DEPARTURE_CITY": "Enter the departure city",
+        "HISTORY": "History",
+        "SELECT_ARRIVAL_CITY": "Select your arrival city",
+        "ENTER_ARRIVAL_CITY": "Enter the arrival city",
+        "SELECT_PASSENGER_COUNT": "Select the number of passengers",
+        "CONFIRM": "Confirm",
+     
+
+
+        "SORT_BY": "Sort By",
+        "FILTER_BY": "Filter By",
+        "MODIFY_SEARCH": "Modify Your Search",
+      
+        "_comment": "translation for modal headers",
+        "MODIFY_SEARCH_HEADER": "Modify Your Search",
+        "FILTER_MODAL_HEADER": "Filter By",
+        "SORT_MODAL_HEADER": "Sort By",
+      
+        "_comment": "translation for labels",
+        "DEPARTURE": "Departure",
+        "ARRIVAL": "Arrival",
+       
+        "APPLY_FILTERS": "Apply Filters",
+      
+        "_comment": "translation for card headers",
+        "TICKET_DETAILS": "Ticket Details",
+      
+        "_comment": "translation for other labels",
+        "DETAILS_OF_TRAVEL": "Details of Travel",
+        "BUY": "Buy",
+        "SEATS": "Seats",
+        "PRICE": "Price",
+
+
+        "_comment": "trie options",
+        "EARLIEST_DEPARTURE": "Earliest departure",
+        "LATEST_DEPARTURE": "Latest departure",
+        "MOST_EXPENSIVE_DEPARTURE": "Most expensive departure",
+        "LEAST_EXPENSIVE_DEPARTURE": "Least expensive departure",
+        "FASTEST": "Fastest",
+        "FROM_A_TO_Z": "From A to Z",
+        "FROM_Z_TO_A": "From Z to A",
+
+        "COMMENT": "payment",
+        "DEPARTURE_LOCATION": "Departure Location",
+  "ARRIVAL_LOCATION": "Arrival Location",
+  "COMPANY_NAME": "Company Name",
+  "PRICE": "Price",
+  "SEAT_NUMBERS": "Seat Numbers",
+  "CONNECT_TO_EARN_POINTS": "Connect to earn ",
+  "SIGN_IN": "Sign in",
+  "CONTACT": "Contact",
+  "TELEPHONE": "Telephone",
+  "REQUIRED_FIELD": "Required Field",
+  "INVALID_PHONE_NUMBER": "Invalid phone number",
+  "EMAIL": "Email",
+  "INVALID_EMAIL": "Invalid email",
+  "PAYMENT_METHOD": "PAYMENT METHOD",
+  "CREDIT_CARD": "Credit Card",
+  "CASH": "Cash",
+  "BANK_APP": "Bank App",
+  "ACCEPT_PROMOTIONAL_OFFERS": "Accept Promotional Offers",
+  "ACCEPT_TERMS_AND_CONDITIONS": "Accept Terms and Conditions",
+  "RESERVATION_FEE": "Reservation Fee",
+  "OFFERED": "Offered",
+  "YOU_WILL_PAY": "You Will Pay",
+  "PAY_WITH_CREDIT_CARD": "Pay with Credit Card",
+  "CASH_PAYMENT_EXPLANATION": "You will receive a Fatourati code that you must pay at a CASHPLUS, FAWATIR, Lana Cash, or DAMANE Cash agency today (Expires in 20 minutes)",
+   "BANK_APP_PAYMENT_EXPLANATION": "You will receive a Fatourati code (Expires in 20 minutes) that you must pay through your bank app CIH, BMCE, Crédit Agricole, and Société Générale.",
+ 
+   "_comment": "detail payment",
+   "CONFIRM_PAYMENT": "Confirm Payment",
+   "CANCEL": "Cancel",
+
+   "TRAVEL_COMPANY": "Travel Company",
+   "DEPARTURE_DATE": "Departure Date",
+   "DEPARTURE_TIME": "Departure Time",
+   "DEPARTURE_ADDRESS": "Departure Address",
+
+
+   "PAYMENT_DETAILS": "Payment Details",
+"ORDER_DETAILS": "Order Details",
+"TRAVEL_DETAILS": "Travel Details",
+"CLIENT_INFORMATION": "Client Information",
+
+"CONNECT_LOGIN": "Connect to continue",
+"FORGOT_PASSWORD": "Forgot your password ?",
+"CREAT_ACCOUNT": "You dont have an account?",
+
+
+"CHECKBOX_LABEL": "Cash",
+"RECEIVE_CODE": "You will receive a Fatourati code ",
+"PAY_AT_AGENCY": "you must pay at an agency",
+"ACCEPTED_AGENCIES": "CASHPLUS, FAWATIR, Lana Cash, or",
+"DAMANE_CASH": "DAMANE Cash today",
+
+
+  "CHECKBOX_LABEL2": "Bank Application",
+  "EXPIRES_IN": "(Expires in 20 minutes)",
+  "PAY_VIA_APP": "pay via your bank application",
+  "SUPPORTED_BANKS": "CIH, BMCE, Crédit Agricole,and",
+  "SOCIETEE":"Société Générale.",
+
+    "TOGGLE_FIRST_LINE": "I accept to receive",
+    "TOGGLE_SECOND_LINE": "promotional offers",
+
+    
+    "TOGGLE_FIRST_LINE2": "I have read and accept the general terms and conditions,",
+    "TOGGLE_SECOND_LINE2": "particularly the mention concerning the protection of",
+    "TOGGLE_THIRD_LINE2": "personal data",
+    "TERMS_AND_CONDITIONS_LINK2": "Terms and Conditions",
+    
+    
+
+
+
+    
+      "CREATE_ACCOUNT": "Create your account",
+      "LAST_NAME": "Last Name",
+      "FIRST_NAME": "First Name",
+      "PHONE": "Phone",
+      "PASSWORD": "Password",
+      "ENTER_LAST_NAME": "Enter your Last Name",
+      "ENTER_FIRST_NAME": "Enter your First Name",
+      "ENTER_PHONE": "Enter your phone number",
+      "ENTER_EMAIL": "Enter your email",
+      "ENTER_PASSWORD": "Enter your password",
+      "FIELD_REQUIRED": "Field required",
+      "MINIMUM_CHARACTERS": "Minimum 8 characters",
+      "INVALID_EMAIL_ADDRESS": "Invalid email address",
+      "PASSWORD_REQUIREMENTS": "Password should contain at least 1 number and 1 character",
+      "REGISTER": "Register",
+      "ALREADY_HAVE_ACCOUNT": "Already have an account?",
+      "LOG_IN": "Log In",
+      "PLEASE_FILL_OUT_FORM": "Please correctly fill out all the form fields"
+    
+    
+  }
+  

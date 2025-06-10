@@ -1,0 +1,61 @@
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/bg-autocar.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.05;
+  }
+  
+  .logo{
+    width: 222px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 75px;
+  }
+  .details-container{
+    width: 95%;
+    height: 180px;
+    margin: 20px auto;
+    border: 1px solid #ABAAAA;
+    height: auto;
+  }
+  .details-container-header{
+    background-color: #DBDBDB;
+    color: #F58C1C;
+    height: 25%;
+    font-weight: 600;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+  }
+  .details-container-content{
+   padding: 5px 10px;
+   display: flex;
+   flex-direction: column;
+   line-height: 40px;
+   background-color: #FBFBFB;
+   color: #393939;
+  }
+  .confirmation-buttons{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+  }
+  .confirmation-buttons ion-button{
+     --color: white!important;
+     width: 40%;
+     height: 23px;
+     --border-radius: none;
+  }
+  #annuler-btn{
+    --color: white!important;
+  }

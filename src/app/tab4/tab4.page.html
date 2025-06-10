@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+   </ion-buttons>
+    <ion-title class="ion-title-header-text">
+      <p><ion-icon src="../../assets/icon/account_circle.svg"></ion-icon>{{ 'CONNECT_YOU' | translate }}</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-icon class="bg-img" src="../../assets/img/bg-autocar.jpeg"></ion-icon>
+  <ion-accordion-group>
+    <ion-accordion value="login" [disabled]="isLoggedInn">
+      <ion-item slot="header" color="light" id="drop-down-label">
+        <ion-label id="ion-accordion-header">{{ 'LOGIN_TITLE' | translate }}</ion-label>
+      </ion-item>
+      <ion-item slot="content">
+        <ion-card class="login-card">
+          <ion-card-content>
+
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <ion-item lines="none">
+                <ion-label class="login-label"><ion-icon src="../../assets/icon/mail.svg"></ion-icon>{{ 'EMAIL_PLACEHOLDER' | translate }}:</ion-label>
+              </ion-item>
+            
+              <ion-item lines="none" class="login-input">
+                <ion-input formControlName="email" type="text" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}"></ion-input>
+              </ion-item>
+              <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+                <ion-text color="danger" *ngIf="loginForm.controls['email'].errors?.['required']">email required</ion-text>
+                <ion-text color="danger" *ngIf="loginForm.controls['email'].errors?.['email']">invalid email</ion-text>
+              </div>
+              
+              <ion-item lines="none">
+                <ion-label class="login-label"><ion-icon src="../../assets/icon/lock.svg"></ion-icon>{{ 'PASSWORD_PLACEHOLDER' | translate }}:</ion-label>
+              </ion-item>
+            
+              <ion-item lines="none" class="login-input">
+                <ion-input formControlName="password" [type]="passwordVisible ? 'text' : 'password'" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}"></ion-input>
+                <ion-button fill="clear" slot="end" (click)="togglePasswordVisibility()" aria-label="Show/hide">
+                  <ion-icon id="eye-icon" slot="icon-only" [name]="passwordVisible ? 'eye' : 'eye-off'" aria-hidden="true"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                <ion-text color="danger" *ngIf="loginForm.controls['password'].errors?.['required']">password required</ion-text>
+              </div>
+            
+              <ion-button type="submit" class="custom-button-style" expand="block">{{ 'LOGIN_BUTTON' | translate }}</ion-button>
+            </form>
+            
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-accordion>
+    <ion-accordion value="second" [disabled]="isLoggedInn">
+      <ion-item slot="header" color="light">
+        <ion-label id="ion-accordion-header">{{ 'REGISTER_HEADER' | translate }}</ion-label>
+      </ion-item>
+      <div class="ion-padding"  slot="content">Second Content</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label id="ion-accordion-header">{{ 'FORGOT_PASSWORD_HEADER' | translate }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
